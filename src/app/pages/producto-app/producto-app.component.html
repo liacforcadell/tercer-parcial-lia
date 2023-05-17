@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ producto.Titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+      <img alt="{{ producto.Titulo }}" src="{{ URLImagen + producto?.img }}" />
+      <ion-card-header>
+      <ion-card-title>{{ producto.Titulo }}</ion-card-title>
+      <ion-card-subtitle>{{ producto.Precio + ' GS.' }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ producto.Contenido }}
+    </ion-card-content>
+    <ion-button class="btn" size="small">{{ producto.Estado }}</ion-button>
+  </ion-card>
+</ion-content>
